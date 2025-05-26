@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Camera Test</title>
+  </head>
+  <body>
+    <h2>Camera Test</h2>
+    <video id="video" width="640" height="480" autoplay></video>
+    <p id="msg" style="color: red;"></p>
+
+    <script>
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+          const video = document.getElementById('video');
+          video.srcObject = stream;
+          document.getElementById('msg').textContent = "✅ Camera started successfully";
+        })
+        .catch(error => {
+          document.getElementById('msg').textContent = "❌ Error: " + error.message;
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>
