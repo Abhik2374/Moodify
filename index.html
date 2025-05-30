@@ -8,40 +8,32 @@
     <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
 </head>
 <body>
-    <div class="main-content">
-        <div class="container">
-            <h1>Moodify</h1>
-            <p class="subtitle">Get song recommendations based on your mood</p>
-            
-            <div class="video-container">
-                <video id="video" width="600" height="450" autoplay muted></video>
-                <canvas id="canvas" width="600" height="450"></canvas>
+    <div class="container">
+        <h1>Moodify</h1>
+        <p class="subtitle">Get song recommendations based on your mood</p>
+        
+        <div class="video-container">
+            <video id="video" width="600" height="450" autoplay muted></video>
+            <canvas id="canvas" width="600" height="450"></canvas>
+        </div>
+        
+        <button id="startButton" class="btn">Start Camera</button>
+        
+        <div class="results">
+            <div class="emotion-display">
+                <h2>Your Mood</h2>
+                <div id="emotion" class="emotion-text">--</div>
+                <div id="emotion-marathi" class="emotion-text-marathi">--</div>
             </div>
             
-            <button id="startButton" class="btn">Start Camera</button>
-            
-            <div class="results">
-                <div class="emotion-display">
-                    <h2>Your Mood</h2>
-                    <div id="emotion" class="emotion-text">--</div>
-                    <div id="emotion-marathi" class="emotion-text-marathi">--</div>
-                </div>
-                
-                <div class="song-recommendations">
-                    <h2>Recommended Songs</h2>
-                    <ul id="songList">
-                        <li>Enable camera to see recommendations</li>
-                    </ul>
-                </div>
+            <div class="song-recommendations">
+                <h2>Recommended Songs</h2>
+                <ul id="songList">
+                    <li>Enable camera to see recommendations</li>
+                </ul>
             </div>
         </div>
     </div>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p class="copyright-text">© 2025 Abhishek Shivaji Kapse – All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
